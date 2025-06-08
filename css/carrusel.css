@@ -1,0 +1,126 @@
+/* Contenedor principal */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ocultar radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Contenedor de slides */
+.slides-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  width: 20%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Movimiento según slide activo */
+#slide1:checked ~ .slides-wrapper .carousel-slides {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .slides-wrapper .carousel-slides {
+  transform: translateX(-20%);
+}
+#slide3:checked ~ .slides-wrapper .carousel-slides {
+  transform: translateX(-40%);
+}
+#slide4:checked ~ .slides-wrapper .carousel-slides {
+  transform: translateX(-60%);
+}
+#slide5:checked ~ .slides-wrapper .carousel-slides {
+  transform: translateX(-80%);
+}
+
+/* Indicadores */
+.carousel-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-nav label {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+  border: 2px solid #fff;
+}
+
+.carousel-nav label:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#slide1:checked ~ .carousel-nav label:nth-child(1),
+#slide2:checked ~ .carousel-nav label:nth-child(2),
+#slide3:checked ~ .carousel-nav label:nth-child(3),
+#slide4:checked ~ .carousel-nav label:nth-child(4),
+#slide5:checked ~ .carousel-nav label:nth-child(5) {
+  background-color: #fff;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Ajustes para pantallas menores a 1024px (laptops) */
+@media screen and (max-width: 1024px) {
+  .carousel-container {
+    max-width: 800px;
+  }
+
+  .carousel-slide {
+    height: 350px;
+  }
+}
+
+/* Ajustes para pantallas menores a 768px (tablets) */
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 100%;
+  }
+
+  .carousel-slide {
+    height: 300px;
+  }
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 480px) {
+  .carousel-slide {
+    height: 220px;
+  }
+
+  .carousel-nav label {
+    width: 12px;
+    height: 12px;
+  }
+}

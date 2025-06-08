@@ -1,0 +1,208 @@
+.modern-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(124,58,237,0.07);
+  padding: 0.7rem 2rem;
+  border-radius: 0 0 22px 22px;
+  position: relative;
+  z-index: 10;
+}
+
+.modern-navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.modern-navbar .brand img {
+  height: 38px;
+  width: auto;
+}
+
+.modern-navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.modern-navbar .nav-menu li {
+  position: relative;
+}
+
+.modern-navbar .nav-menu a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modern-navbar .nav-menu a:hover,
+.modern-navbar .nav-menu .dropdown:hover > a {
+  background: linear-gradient(90deg, #ff4081 0%, #7c3aed 100%);
+  color: #fff;
+}
+
+.modern-navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 8px 24px rgba(124,58,237,0.08);
+  border-radius: 12px;
+  min-width: 160px;
+  z-index: 20;
+  padding: 0.5rem 0;
+}
+
+.modern-navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.modern-navbar .dropdown-menu li a {
+  padding: 10px 20px;
+  color: #222;
+  display: block;
+  border-radius: 8px;
+}
+
+.modern-navbar .dropdown-menu li a:hover {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.modern-navbar .nav-btn-contacto {
+  background: linear-gradient(90deg, #ff4081 0%, #7c3aed 100%);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 22px;
+  padding: 8px 22px;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modern-navbar .nav-btn-contacto:hover,
+.modern-navbar .nav-btn-contacto:focus {
+  background: linear-gradient(90deg, #7c3aed 0%, #ff4081 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.modern-navbar .nav-btn-contacto svg {
+  stroke: #fff;
+}
+
+.modern-navbar .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modern-navbar .search-form input[type="text"] {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #e0e0e0;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.modern-navbar .search-form input[type="text"]:focus {
+  border: 1.5px solid #7c3aed;
+}
+
+.modern-navbar .search-form button {
+  background: linear-gradient(90deg, #ff4081 0%, #7c3aed 100%);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modern-navbar .search-form button:hover {
+  background: linear-gradient(90deg, #7c3aed 0%, #ff4081 100%);
+}
+
+/* Responsive */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  margin-left: 1rem;
+}
+
+.nav-toggle-label span {
+  width: 28px;
+  height: 3px;
+  background: #7c3aed;
+  border-radius: 2px;
+  display: block;
+  transition: all 0.3s;
+}
+
+@media (max-width: 900px) {
+  .modern-navbar {
+    flex-wrap: wrap;
+    padding: 0.7rem 1rem;
+  }
+  .modern-navbar .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.97);
+    flex-direction: column;
+    gap: 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 8px 24px rgba(124,58,237,0.08);
+    display: none;
+  }
+  .modern-navbar .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .modern-navbar .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 0;
+    justify-content: center;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
+  }
+  .nav-toggle-label {
+    display: flex;
+  }
+  .modern-navbar .search-form {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+}

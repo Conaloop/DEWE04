@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo | Urban Shoes</title>
+  <link rel="stylesheet" href="css/barra.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/barra_de_navegacion.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%);
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .equipo-header {
+      text-align: center;
+      padding: 48px 10px 24px 10px;
+      background: linear-gradient(90deg, #908f91 0%, #8f8487 100%);
+      color: #fff;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.10);
+      margin-bottom: 32px;
+    }
+    .equipo-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    .equipo-header p {
+      font-size: 1.15rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .grupo-info {
+      text-align: center;
+      margin-bottom: 32px;
+      color: #7c3aed;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .equipo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 0 24px 40px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .integrante-card {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.10);
+      width: 270px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /*para cambiar el espacio de las columnas de donde se pone las fotos*/
+      padding: 28px 18px 22px px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .integrante-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.16);
+    }
+    .integrante-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border-radius: 50%;
+      border: 3px solid #7c3aed33;
+      background: #fff;
+      box-shadow: 0 2px 12px #7c3aed11;
+    }
+    .integrante-card h3 {
+      margin: 0 0 4px 0;
+      font-size: 1.2rem;
+      color: #7c3aed;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .integrante-card .rol {
+      color: #ff4081;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .integrante-card p {
+      color: #444;
+      font-size: 0.98rem;
+      margin: 0 0 10px 0;
+      text-align: center;
+      min-height: 36px;
+    }
+    .integrante-social {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .integrante-social a {
+      color: #7c3aed;
+      font-size: 1.5rem;
+      transition: color 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .integrante-social a:hover {
+      color: #ff4081;
+      transform: scale(1.2) rotate(-8deg);
+    }
+    @media (max-width: 700px) {
+      .equipo-grid {
+        gap: 16px;
+        padding: 0 4px 20px 4px;
+      }
+      .integrante-card {
+        width: 98vw;
+        max-width: 320px;
+        padding: 18px 6px 14px 6px;
+      }
+      .equipo-header {
+        padding: 32px 2px 18px 2px;
+      }
+    }
+  </style>
+  <!-- Ionicons CDN para iconos sociales -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <nav class="custom-navbar modern-navbar">
+    <a href="index.html" class="brand">
+      <img src="img/New_Balance_logo.svg.png" alt="logo">
+      <span></span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    
+        <a href="formulario.html" class="nav-btn-contacto">
+          <span>Contacto</span>
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="equipo-header">
+    <h1>Nuestro Equipo</h1>
+    <p>Conoce a los integrantes que hacen posible Calzado Deportivo H&M</p>
+  </section>
+
+  <div class="grupo-info">
+    Grupo: <strong>608 informatica  | Proyecto: <strong>Calzado Deportivo H&M</strong>
+  </div>
+
+  <main>
+    <div class="equipo-grid">
+      <!-- Integrante 1 -->
+      <div class="integrante-card">
+        <img src="img/rodrigo.jpg" alt="Nombre Integrante 1">
+        <h3>Rodrigo Alberto</h3>
+        <div class="rol">Desarrolladora Web</div>
+        <p>Especialista en frontend, diseño UI y experiencia de usuario.</p>
+        <div class="integrante-social">
+          <a href="https://www.instagram.com/el_rodrixd?igsh=d3FocGV1d3FmcXNl"><ion-icon name="logo-instagram"></ion-icon></a>
+          
+        </div>
+      </div>
+      <!-- Integrante 2 -->
+      <div class="integrante-card">
+        <img src="img/uriel.jpg" alt="Nombre Integrante 2">
+        <h3>Uriel Adrian</h3>
+        <div class="rol">Backend & Base de Datos</div>
+        <p>Encargado de la lógica, servidores y gestión de datos.</p>
+        <div class="integrante-social">
+      <a href="https://www.instagram.com/casanovauriel21?igsh=aWMzeXBwc2owd3Z4&utm_source=qr"><ion-icon name="logo-instagram"></ion-icon></a>
+
+        </div>
+      </div>
+      <!-- Integrante 3 -->
+      <div class="integrante-card">
+        <img src="img/gaspar.jpg" alt="Nombre Integrante 3">
+        <h3>Gaspar adolfo</h3>
+        <div class="rol">Marketing Digital</div>
+        <p>Gestión de redes sociales, campañas y comunicación.</p>
+        <div class="integrante-social">
+         
+          <a href="https://www.instagram.com/gasper_rodri/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+      </div>
+      <!-- Integrante 4 -->
+      <div class="integrante-card">
+        <img src="img/william.jpg" alt="Nombre Integrante 4">
+        <h3>William Aguirre</h3>
+        <div class="rol">Diseñador Gráfico</div>
+        <p>Responsable de la imagen visual y material promocional.</p>
+        <div class="integrante-social">
+          <a href="https://www.instagram.com/william_del_angel?igsh=MXJqa3RsazBuOTc3eQ=="><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+      </div>
+      <div class="integrante-card">
+        <img src="img/chino.jpg" alt="Nombre Integrante 4">
+        <h3>Jesús Alejandro</h3>
+        <div class="rol">Trabajadores</div>
+        <p>Responsable de la imagen visual y material promocional.</p>
+        <div class="integrante-social">
+          
+ <a href="https://www.facebook.com/share/14rEadP6f9/"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+      </div>
+
+       <div class="integrante-card">
+        <img src="img/primo.jpg" alt="Nombre Integrante 4">
+        <h3>José Manuel</h3>
+        <div class="rol">Trabajadores</div>
+        <p>Responsable de la imagen visual y material promocional.</p>
+        <div class="integrante-social">
+          <a href="https://www.instagram.com/echeverria_josem?utm_source=qr&igsh=ZmJzcmFodDR4c2py"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+      </div>
+
+
+       <div class="integrante-card">
+        <img src="img/chucho.jpg" alt="Nombre Integrante 4">
+        <h3>Jesús Gabriel</h3>
+        <div class="rol">Trabajadores</div>
+        <p>inge en sistema de videos</p>
+        <div class="integrante-social">
+          <a href="https://www.instagram.com/kreeyzxj?igsh=YzBhNngwcGo1Nmd0"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+      </div>
+
+      <!-- Puedes agregar más integrantes repitiendo el bloque -->
+    </div>
+  </main>
+
+  <footer class="footer text-center">
+    <ul class="social-icon">
+      <li class="icon-elem"><a href="https://www.youtube.com/@CONALEPyucatan" class="icon"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li class="icon-elem"><a href="https://www.instagram.com/explore/locations/564647773/conalep-valladolid-yucatan/" class="icon"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li class="icon-elem"><a href="(985) 106 2102" class="icon"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+      <li class="icon-elem"><a href="https://www.facebook.com/conalep.yucatan" class="icon"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li class="icon-elem"><a href="buzonvalladolid@yuc.conalep.edu.mx" class="icon"><ion-icon name="mail-outline"></ion-icon></a></li>
+    </ul>
+    <p class="text">2024 | Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

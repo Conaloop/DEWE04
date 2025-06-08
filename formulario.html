@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Urban Shoes</title>
+  <link rel="stylesheet" href="css/formulario.css">
+  <link rel="stylesheet" href="css/barra.css">
+</head>
+<body>
+  <nav class="custom-navbar modern-navbar">
+    <a href="index.html" class="brand">
+      <img src="img/New_Balance_logo.svg.png" alt="logo">
+      
+    </a>
+    
+
+  <main class="contacto-main">
+    <section class="form-section">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes dudas, comentarios o sugerencias? Completa el formulario y te responderemos lo antes posible.</p>
+      <form class="contact-form" autocomplete="off">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="(opcional)">
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">
+  Enviar mensaje
+  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2L15 22L11 13L2 9L22 2Z"></path></svg>
+</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script>
+  // Configura tu proyecto de Firebase aquí
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-EXAMPLEKEY1234567890abcdefg",
+    authDomain: "formulario-309e2.firebaseapp.com",
+    databaseURL: "https://formulario-309e2-default-rtdb.firebaseio.com/",
+    projectId: "formulario-309e2",
+    storageBucket: "formulario-309e2.appspot.com",
+    messagingSenderId: "123456789012",
+    appId: "1:123456789012:web:abcdef1234567890"
+  };
+
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+
+  // Maneja el envío del formulario
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // Guarda los datos en la base de datos
+    database.ref('contactos').push({
+      nombre,
+      email,
+      telefono,
+      mensaje,
+      fecha: new Date().toISOString()
+    }).then(() => {
+      alert('¡Mensaje enviado y guardado!');
+      this.reset();
+    }).catch((error) => {
+      alert('Error al guardar: ' + error.message);
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochilas | Urban Shoes</title>
+  <link rel="stylesheet" href="css/barra.css">
+  <link rel="stylesheet" href="css/footer.css">
+   
+
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ef 60%, #f8fafc 100%);
+      min-height: 100vh;
+    }
+    .mochila-hero {
+      background: linear-gradient(120deg, #ffffff 0%, #faf9fc 100%);
+      color: #684141;
+      text-align: center;
+      padding: 60px 10px 40px 10px;
+      border-radius: 0 0 48px 48px;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.10);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mochila-hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px #7c3aed55;
+    }
+    .mochila-hero p {
+      font-size: 1.18rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 8px #0002;
+    }
+    .mochilas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 36px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      padding: 0 24px;
+    }
+    .mochila-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 4px 24px rgba(255,64,129,0.10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 18px 24px 18px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #ff408122;
+    }
+    .mochila-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.16);
+      border-color: #7c3aed44;
+    }
+    .mochila-card img {
+      width: 140px;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      border-radius: 18px;
+      background: #f8fafc;
+      box-shadow: 0 2px 12px #ff408111;
+      border: 2px solid #7c3aed22;
+    }
+    .mochila-card h5 {
+      margin: 0 0 6px 0;
+      font-size: 1.25rem;
+      color: #ff4081;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .mochila-card .precio {
+      color: #7c3aed;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .mochila-card .caracteristicas {
+      color: #444;
+      font-size: 0.98rem;
+      margin: 10px 0 18px 0;
+      text-align: center;
+      min-height: 44px;
+    }
+    .mochila-card .btn-mochila {
+      width: 100%;
+      padding: 12px 0;
+      background: linear-gradient(90deg, #7c3aed 0%, #0a0a0a 100%);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.13);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: auto;
+      text-decoration: none;
+    }
+    .mochila-card .btn-mochila svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+    }
+    .mochila-card .btn-mochila:hover, .mochila-card .btn-mochila:focus {
+      background: linear-gradient(90deg, #000000 0%, #7c3aed 100%);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18);
+    }
+    @media (max-width: 700px) {
+      .mochilas-grid {
+        gap: 16px;
+        padding: 0 4px 20px 4px;
+      }
+      .mochila-card {
+        padding: 18px 6px 14px 6px;
+      }
+      .mochila-hero {
+        padding: 32px 2px 18px 2px;
+      }
+    }
+  </style>
+  <!-- Ionicons CDN para iconos de carrito -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+<nav class="custom-navbar modern-navbar">
+    <a href="index.html" class="brand">
+      <img src="img/New_Balance_logo.svg.png" alt="logo">
+      <span></span>
+    </a>
+
+
+    
+      </li>
+    </ul>
+  </nav>
+
+
+  <section class="mochila-hero">
+    <h1>Mochilas New balance</h1>
+    <p>¡Lleva tu estilo y comodidad a todas partes! Descubre nuestra colección de mochilas deportivas.</p>
+  </section>
+  <main>
+    <div class="mochilas-grid">
+      <!-- Mochila 1 -->
+      <div class="mochila-card">
+        <img src="img/mochilas.png" alt="Mochila Nike Classic">
+        <h5>Heritage Backpack</h5>
+        <div class="precio">$1,899.00</div>
+        <div class="caracteristicas">
+          Mochila resistente al agua, compartimento para laptop y tirantes acolchados.
+        </div>
+        <a href="https://www.newbalancemexico.com/lab51524twf/LAB51524TWF.html" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+      </div>
+      <!-- Mochila 2 -->
+      <div class="mochila-card">
+        <img src="img/mochila2.jpg" alt="Mochila Adidas Urban">
+        <h5>New Balance New Balance Mochila</h5>
+        <div class="precio">$799.00</div>
+        <div class="caracteristicas">
+          Diseño moderno, múltiples bolsillos y material ecológico.
+        </div>
+        <a href="https://www.amazon.com.mx/Concept-One-Balance-computadora-port%C3%A1til/dp/B0C79B3SYM/ref=asc_df_B0C79B3SYM?mcid=893ab731df7630cfa61e667ee604cf22&tag=gledskshopmx-20&linkCode=df0&hvadid=709966298345&hvpos=&hvnetw=g&hvrand=5770495303745690160&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1010016&hvtargid=pla-2189550653678&language=es_MX&gad_source=1&th=1&psc=1" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+      </div>
+      <!-- Mochila 3 -->
+      <div class="mochila-card">
+        <img src="img/machila3.png" alt="Mochila Puma Street">
+        <h5>New Balance Duffel, Small Gym</h5>
+        <div class="precio">$550.86</div>
+        <div class="caracteristicas">
+          Ligera, con refuerzo en la base y bolsillo secreto para objetos de valor.
+        </div>
+        <a href="https://www.amazon.com.mx/dp/B0CRMKHHPD/ref=emc_bcc_2_i?th=1" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+      </div>
+      <!-- Mochila 3 -->
+      <div class="mochila-card">
+        <img src="img/mochila5.png" alt="Mochila Puma Street">
+        <h5>New Balance New Balance Backpack</h5>
+        <div class="precio">$1,291</div>
+        <div class="caracteristicas">
+          Ligera, con refuerzo en la base y bolsillo secreto para objetos de valor.
+        </div>
+        <a href="https://www.amazon.com.mx/dp/B0B47N1NHK/ref=emc_bcc_2_i?th=1&psc=1" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+    </div>
+    <!-- Mochila 3 -->
+      <div class="mochila-card">
+        <img src="img/mochila6.png" alt="Mochila Puma Street">
+        <h5>New Balance New Balance Backpack</h5>
+        <div class="precio">$1,291</div>
+        <div class="caracteristicas">
+          Ligera, con refuerzo en la base y bolsillo secreto para objetos de valor.
+        </div>
+        <a href="https://www.amazon.com.mx/dp/B0C79BXGX8/ref=emc_bcc_2_i" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+        </div>
+         <!-- Mochila 3 -->
+      <div class="mochila-card">
+        <img src="img/machila7.png" alt="Mochila Puma Street">
+        <h5>New Balance Mochila, mochila Core</h5>
+        <div class="precio">$712</div>
+        <div class="caracteristicas">
+          Ligera, con refuerzo en la base y bolsillo secreto para objetos de valor.
+        </div>
+        <a href="https://www.amazon.com.mx/New-Balance-Mochila-Performance-senderismo/dp/B0B47GTXCF?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1G99GVHAT2WD8" class="btn-mochila">
+          Comprar ahora
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
+  </main>
+</body>
+</html>

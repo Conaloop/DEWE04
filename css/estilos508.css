@@ -1,0 +1,31 @@
+.publicidad{
+     background-color: rgb(69, 174, 47);
+     color: white;
+     border: solid 3px #211a1a;
+     align-items: center;
+ }
+ .barras{
+     height: 70px;
+     color: #211a1a;
+}
+.logo{
+    max-width: 59px; 
+    height: auto;
+
+}
+.patrocinio a {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center;    /* Centra las imágenes horizontalmente */
+}
+
+.patrocinio img {
+    width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Mantiene las proporciones originales */
+    margin-bottom: 10px; /* Espacio entre las imágenes */
+}
+img{
+    width: 10px;
+    height: 10px;
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos Promocionales | Urban Shoes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #7fa1a5 60%, #aaa3a4 100%);
+      min-height: 100vh;
+    }
+    .video-hero {
+      background: linear-gradient(90deg, #0d0d0e 0%, #0e0d0d 100%);
+      color: #dd8f8f;
+      text-align: center;
+      padding: 48px 10px 24px 10px;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.10);
+      margin-bottom: 32px;
+    }
+    .video-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    .video-hero p {
+      font-size: 1.15rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      padding: 0 24px;
+    }
+    .video-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.10);
+      padding: 32px 32px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .video-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.16);
+    }
+ 
+   /* nos sirve para modificar las casillas de los videos si lo que remos grande o pequeño */
+    .video-card iframe, .video-card video {
+      width: 100%;
+      max-width: 10000px;
+      height: 500px;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      border: none;
+      background: #000;
+      box-shadow: 0 4px 24px #7c3aed22;
+      display: block;
+    }
+    .video-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.35rem;
+      color: #7c3aed;
+      font-weight: 700;
+      text-align: center;
+    }
+    .video-card p {
+      color: #444;
+      font-size: 1.08rem;
+      margin: 0;
+      text-align: center;
+    }
+    @media (max-width: 1000px) {
+      .video-card iframe, .video-card video {
+        max-width: 100%;
+        height: 340px;
+      }
+    }
+    @media (max-width: 700px) {
+      .videos-grid {
+        gap: 18px;
+        padding: 0 4px 20px 4px;
+      }
+      .video-hero {
+        padding: 32px 2px 18px 2px;
+      }
+      .video-card {
+        padding: 12px 2px 18px 2px;
+      }
+      .video-card iframe, .video-card video {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="video-hero">
+    <a href="index.html" style="display:inline-block;margin-bottom:18px;padding:10px 28px;background:#fff;color:#7c3aed;font-weight:700;border-radius:24px;text-decoration:none;box-shadow:0 2px 8px #7c3aed22;transition:background 0.2s,color 0.2s;">
+      ← Volver al inicio
+    </a>
+    <h1>Videos Promocionales</h1>
+    <p>Descubre nuestros videos de calzado deportivo, promociones y testimonios de clientes.</p>
+  </section>
+  <main>
+    <div class="videos-grid">
+      <!-- Video 1 (Promoción, se reproduce automáticamente) -->
+      <div class="video-card">
+        <video controls autoplay muted loop poster="img/video-promo.jpg">
+          <source src="videos/videoplayback (1).mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <h3>Promoción Especial New balance</h3>
+        <p>Aprovecha nuestras ofertas exclusivas en mochilas y accesorios deportivos.</p>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-card">
+        <video controls autoplay muted loop poster="img/video1.jpg">
+          <source src="videos/NUEVOS NEW BALANCE (1).mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <h3>New balance - Nueva Colección</h3>
+        <p>Conoce los nuevos modelos y tendencias en calzado deportivo para esta temporada.</p>
+      </div>
+      <!-- Video 3 -->
+      <div class="video-card">
+        <video controls autoplay muted loop poster="img/video2.jpg">
+          <source src="videos/Campaña Exterior New Balance.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <h3>Testimonios de Clientes</h3>
+        <p>Escucha la experiencia de quienes ya usan New balance y recomiendan nuestros productos.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

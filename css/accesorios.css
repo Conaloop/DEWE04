@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%);
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.accesorios-header {
+  text-align: center;
+  margin: 40px 0 24px 0;
+}
+
+.accesorios-header h1 {
+  color: #7c3aed;
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.accesorios-header p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  align-items: stretch;
+  padding: 0 24px 40px 24px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(124,58,237,0.08);
+  padding: 22px 16px 18px 16px;
+  min-height: 420px;
+  height: 100%;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.product-card .info {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    padding: 0 4px 20px 4px;
+    gap: 16px;
+  }
+  .accesorios-header {
+    margin: 24px 0 12px 0;
+  }
+}
+
+
+/* codigo de gorraa*/
+
+.tallas-gorra {
+  margin-bottom: 16px;
+}
+
+.tallas-gorra span {
+  display: block;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+.tallas-gorra-opciones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tallas-gorra-opciones input[type="radio"] {
+  display: none;
+}
+
+.tallas-gorra-opciones label {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid #e0e0e0;
+  background: #f8fafc;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 
+    background 0.2s, 
+    color 0.2s, 
+    border 0.2s, 
+    box-shadow 0.2s, 
+    transform 0.15s;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(124,58,237,0.04);
+  user-select: none;
+}
+
+.tallas-gorra-opciones input[type="radio"]:checked + label {
+  background: linear-gradient(90deg, #7c3aed 0%, #ff4081 100%);
+  color: #fff;
+  border: 2px solid #7c3aed;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+.tallas-gorra-opciones label:hover {
+  border: 2px solid #ff4081;
+  color: #7c3aed;
+}

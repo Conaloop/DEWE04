@@ -1,0 +1,48 @@
+/* Decoración para el selector de tallas y su etiqueta */
+/* Moderno selector de tallas para tarjetas de producto */
+.product-card label[for^="talla-"] {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.product-card select[name^="talla-"] {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #f8fafc 60%, #e0e7ef 100%);
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s, background 0.2s;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  position: relative;
+}
+
+.product-card select[name^="talla-"]:focus {
+  background: linear-gradient(90deg, #e0e7ef 60%, #f8fafc 100%);
+  box-shadow: 0 0 0 2px #ff4081;
+}
+
+.product-card select[name^="talla-"] option {
+  color: #222;
+  background: #fff;
+}
+
+/* Flecha personalizada para el select */
+.product-card select[name^="talla-"] {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L10 13L15 8' stroke='%23ff4081' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2em;
+  padding-right: 2.5em;
+}

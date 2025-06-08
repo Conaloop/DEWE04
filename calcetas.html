@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcetas | Urban Shoes</title>
+  <link rel="stylesheet" href="css/barra.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/talla.css">
+  <link rel="stylesheet" href="css/boton.css">
+  <link rel="stylesheet" href="css/accesorios.css">
+  <link rel="stylesheet" href="css/barra_de_navegacion.css">
+  <style>
+    /* Estilo diferente y moderno para la página de calcetas */
+    body {
+      background: linear-gradient(135deg, #f8fafc 60%, #e5e2e7 100%);
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .calcetas-hero {
+      background: linear-gradient(90deg, #f0f1f3 0%, #f2f2f7 100%);
+      color: #804747;
+      text-align: center;
+      padding: 48px 10px 32px 9px;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.10);
+      margin-bottom: 32px;
+    }
+    .calcetas-hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      font-weight: 900;
+      text-shadow: 0 2px 12px #7c3aed55;
+    }
+    .calcetas-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .calcetas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 0 24px 40px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .calceta-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 22px;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.10);
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 18px 22px 18px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .calceta-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.16);
+    }
+    .calceta-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      border: 3px solid #7c3aed33;
+      background: #fff;
+      box-shadow: 0 2px 12px #7c3aed11;
+    }
+    .calceta-card h5 {
+      margin: 0 0 6px 0;
+      font-size: 1.2rem;
+      color: #7c3aed;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .calceta-card .precio {
+      color: #ff4081;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .tallas-calceta {
+      margin-bottom: 14px;
+      width: 100%;
+      text-align: center;
+    }
+    .tallas-calceta span {
+      display: block;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 7px;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
+    .tallas-calceta-opciones {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .tallas-calceta-opciones input[type="radio"] {
+      display: none;
+    }
+    .tallas-calceta-opciones label {
+      padding: 8px 20px;
+      border-radius: 18px;
+      border: 2px solid #e0e0e0;
+      background: #f8fafc;
+      color: #222;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s, transform 0.15s;
+      font-size: 1rem;
+      box-shadow: 0 1px 4px rgba(124,58,237,0.04);
+      user-select: none;
+    }
+    .tallas-calceta-opciones input[type="radio"]:checked + label {
+      background: linear-gradient(90deg, #7b7bad 0%, #ffffff 100%);
+      color: #fff;
+      border: 2px solid #080808;
+      box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+      font-weight: 700;
+      transform: scale(1.08);
+    }
+    .tallas-calceta-opciones label:hover {
+      border: 2px solid #ff4081;
+      color: #7c3aed;
+    }
+    .calceta-card p {
+      color: #444;
+      font-size: 0.98rem;
+      margin: 10px 0 18px 0;
+      text-align: center;
+      min-height: 44px;
+    }
+    .btn-calceta {
+      width: 100%;
+      padding: 12px 0;
+      background: linear-gradient(90deg, #050505 0%, #7c3aed 100%);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.13);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-calceta svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+    }
+    .btn-calceta:hover, .btn-calceta:focus {
+      background: linear-gradient(90deg, #7c3aed 0%, #050505 100%);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18);
+    }
+    @media (max-width: 700px) {
+      .calcetas-grid {
+        gap: 16px;
+        padding: 0 4px 20px 4px;
+      }
+      .calceta-card {
+        width: 98vw;
+        max-width: 340px;
+        padding: 18px 6px 14px 6px;
+      }
+      .calcetas-hero {
+        padding: 32px 2px 18px 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="custom-navbar modern-navbar">
+    <a href="index.html" class="brand">
+      <img src="img/New_Balance_logo.svg.png" alt="logo">
+      <span>Urban Shoes</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="nav-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="calzadoH.html">Caballeros</a></li>
+      <li><a href="calzadoM.html">Damas</a></li>
+      <li class="dropdown">
+        <a href="#">Accesorios</a>
+        <ul class="dropdown-menu">
+          <li><a href="gorras.html">Gorras</a></li>
+          <li><a href="calcetas.html">Calcetas</a></li>
+          <li><a href="mochila.html">Mochilas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="formulario.html" class="nav-btn-contacto">
+          <span>Contacto</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2L15 22L11 13L2 9L22 2Z"></path></svg>
+        </a>
+      </li>
+    </ul>
+    <form class="search-form">
+      <input type="text" placeholder="Buscar">
+      <button type="submit">Buscar</button>
+    </form>
+  </nav>
+
+  <section class="calcetas-hero">
+    <h1>Calcetas Urbanas</h1>
+    <p>¡Dale color y comodidad a tus pasos! Descubre nuestra colección de calcetas deportivas y urbanas.</p>
+  </section>
+
+  <main>
+    <div class="calcetas-grid">
+      <!-- Producto 1 -->
+      <div class="calceta-card">
+        <img src="img/las55451wt_nb_03_i-removebg-preview calcetines.png" alt="Calceta Nike Everyday">
+        <h5>Run Flat Knit Tab No Show Sock 1 Pair</h5>
+        <div class="precio">$249.00</div>
+        <div class="tallas-calceta">
+          <span>Talla:</span>
+          <div class="tallas-calceta-opciones">
+            <input type="radio" id="talla-s-c1" name="talla-calceta-1" value="S">
+            <label for="talla-s-c1">S</label>
+            <input type="radio" id="talla-m-c1" name="talla-calceta-1" value="M">
+            <label for="talla-m-c1">M</label>
+            <input type="radio" id="talla-l-c1" name="talla-calceta-1" value="L">
+            <label for="talla-l-c1">L</label>
+            <input type="radio" id="talla-xl-c1" name="talla-calceta-1" value="XL">
+            <label for="talla-xl-c1">XL</label>
+          </div>
+        </div>
+        <p>Calcetas deportivas de algodón, transpirables y cómodas para el día a día.</p>
+<a href="https://www.newbalancemexico.com/las51243w/LAS51243W.html" class="btn-calceta">
+  Comprar ahora
+  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+</a>
+        
+      </div>
+      <!-- Producto 2 -->
+      <div class="calceta-card">
+        <img src="img/calcetines.png" alt="Calceta Adidas Performance">
+        <h5>No Show Run Sock 3 Pack</h5>
+        <div class="precio">$319.20</div>
+        <div class="tallas-calceta">
+          <span>Talla:</span>
+          <div class="tallas-calceta-opciones">
+            <input type="radio" id="talla-s-c2" name="talla-calceta-2" value="S">
+            <label for="talla-s-c2">S</label>
+            <input type="radio" id="talla-m-c2" name="talla-calceta-2" value="M">
+            <label for="talla-m-c2">M</label>
+            <input type="radio" id="talla-l-c2" name="talla-calceta-2" value="L">
+            <label for="talla-l-c2">L</label>
+            <input type="radio" id="talla-xl-c2" name="talla-calceta-2" value="XL">
+            <label for="talla-xl-c2">XL</label>
+          </div>
+        </div>
+        <p>Calcetas deportivas de algodón, transpirables y cómodas para el día a día.</p>
+<a href="https://www.newbalancemexico.com/no_show_run_sock_3_pack/LAS44223BKW.html" class="btn-calceta" target="_blank">
+  Comprar ahora
+  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+</a>
+      </div>
+      <!-- Producto 3 -->
+      <div class="calceta-card">
+        <img src="img/calcetines2.png" alt="Calceta Urban Socks">
+        <h5>Everyday Stripe Midcalf 3 Pack
+</h5>
+        <div class="precio">$599.00
+</div>
+        <div class="tallas-calceta">
+          <span>Talla:</span>
+          <div class="tallas-calceta-opciones">
+            <input type="radio" id="talla-s-c3" name="talla-calceta-3" value="S">
+            <label for="talla-s-c3">S</label>
+            <input type="radio" id="talla-m-c3" name="talla-calceta-3" value="M">
+            <label for="talla-m-c3">M</label>
+            <input type="radio" id="talla-l-c3" name="talla-calceta-3" value="L">
+            <label for="talla-l-c3">L</label>
+            <input type="radio" id="talla-xl-c3" name="talla-calceta-3" value="XL">
+            <label for="talla-xl-c3">XL</label>
+          </div>
+        </div>
+        <p>Un toque con estilo, soporte y comodidad para renovar tu cajón de calcetines.</p>
+<a href="https://www.newbalancemexico.com/las51243w/LAS51243W.html" class="btn-calceta" target="_blank">
+  Comprar ahora
+  <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+</a>
+          
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

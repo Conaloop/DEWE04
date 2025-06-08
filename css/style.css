@@ -1,0 +1,218 @@
+*{
+     margin: 0;
+     padding: 0;
+     font-family: -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+      'Open Sans', 'Helvetica Neue', sans-serif
+ }
+ 
+ body{
+     height: 100%;
+     width: 100%;
+     background-color: #cbc8c8;
+ }
+ 
+ main{
+     min-height: 100vh;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+ 
+ .title{
+     font-size: 60px;
+     color:rgb(242, 242, 242);
+     font-weight: 700;
+     margin-bottom: 5rem;
+ }
+ .text{
+      color: rgb(0, 0, 0);
+ }
+ 
+ .faq-content{
+     width: 60%;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+ 
+ .faq-container{
+     height: auto;
+     width: 100%;
+     position: relative;
+     cursor: pointer;
+     transition: 0.5s;
+     border-bottom: 1px solid #afafaf;
+ }
+ 
+ .faq-collapsible{
+     height: 80px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 40px;
+     box-sizing: border-box;
+     background-color: rgb(147, 142, 142);
+     overflow: hidden;  
+ }
+ 
+ .first{
+     border-top: 1px solid #afafaf;
+ }
+ 
+ .question{
+     font-size: 22px;
+     font-weight: 600;
+ }
+ 
+ .question.active{
+     color: rgb(35, 113, 231);
+ }
+ 
+ .faq-answer{
+     overflow: hidden;
+     transition:  0.5s;
+     height: 0;
+ }
+ 
+ .faq-answer p{
+     padding: 10px 40px;
+     box-sizing: border-box;
+     font-size: 18px;
+ }
+ 
+ .open{
+     height: 100px;
+     transform: translateY(0);
+ }
+ 
+ .arrow-container{
+     width: 40px;
+     height: 30px;
+     position: relative;
+ }
+ 
+ .up .line{
+     transform: translate(0%, -50%) rotate(-45deg);
+ }
+ .up .line:nth-of-type(2){
+     transform: translate(0%, -50%) rotate(45deg);
+ }
+ 
+ .line{
+     height: 1px;
+     width: 50%;
+     position: absolute;
+     background-color: #f4f2f2;
+     position: absolute;
+     top: 50%;
+     left: 8%;
+     transform: translate(0%, -50%) rotate(45deg);
+ }
+ 
+ .line:nth-of-type(2){
+     right: 8%;
+     left: auto;
+     transform: translate(0%, -50%) rotate(-45deg);
+ }
+/* Estilo para la sección de Preguntas Frecuentes */
+.faq-section {
+  max-width: 800px; /* Ancho máximo */
+  width: 100%;
+  margin: 20px auto; /* Centrado horizontal */
+ 
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 2rem; /* Espaciado interno */
+  overflow: hidden; /* Oculta contenido desbordado */
+}
+
+.faq-section .title {
+  font-size: 2rem; /* Tamaño de fuente */
+  color: #106eea; /* Color azul */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  border-bottom: 2px solid #106eea; /* Línea decorativa */
+  padding-bottom: 0.5rem;
+}
+
+.faq-item {
+  background: #f9f9f9; /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 1rem; /* Espaciado entre preguntas */
+  padding: 1rem; /* Espaciado interno */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.faq-item[open] {
+  background: #e6f0ff; /* Fondo azul claro al abrir */
+  box-shadow: 0 4px 12px rgba(16, 110, 234, 0.2); /* Sombra más intensa */
+}
+
+summary {
+  font-size: 1.2rem; /* Tamaño de fuente */
+  font-weight: bold;
+  color: #333; /* Color del texto */
+  cursor: pointer; /* Cursor de mano */
+  display: flex;
+  justify-content: space-between; /* Espaciado entre texto y flecha */
+  align-items: center;
+  outline: none; /* Elimina el borde al hacer clic */
+}
+
+summary:hover {
+  color: #106eea; /* Cambia el color al pasar el mouse */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Oculta el marcador predeterminado */
+}
+
+/* Flecha personalizada */
+summary::after {
+  content: '⯈'; /* Flecha derecha */
+  font-size: 1.2rem;
+  color: #106eea;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+details[open] summary::after {
+  transform: rotate(90deg); /* Gira la flecha al abrir */
+}
+
+.faq-item p {
+  margin-top: 0.5rem; /* Espaciado superior */
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #555; /* Color del texto */
+  line-height: 1.6; /* Altura de línea */
+  padding-left: 1rem; /* Sangría para el texto */
+  border-left: 3px solid #106eea; /* Línea decorativa a la izquierda */
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 1.5rem; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .faq-section .title {
+    font-size: 1.5rem; /* Reduce el tamaño del título */
+  }
+
+  summary {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+  }
+}
+
+
+
+
